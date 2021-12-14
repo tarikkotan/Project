@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate
 class CreatePollForm(ModelForm):
     class Meta:
         model = Poll
-        fields = ['question', 'option_one', 'option_two', 'option_three']
+        fields = ['option_one', 'option_two', 'option_three']
         
 class NewUserForm(UserCreationForm):
     email = forms.EmailField(required=True)

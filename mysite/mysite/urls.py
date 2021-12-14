@@ -22,7 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', poll_views.home, name='home'),
     path("login/", poll_views.login_request, name="login"),
-    path('create/', poll_views.create, name='create'),
     path('register/',poll_views.register_request, name="register"),
     path("logout", poll_views.logout_request, name= "logout"),
 ]

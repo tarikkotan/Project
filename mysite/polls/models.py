@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Poll(models.Model):
-    question = models.TextField()
+   
     option_one = models.CharField(max_length=300)
     option_two = models.CharField(max_length=300)
     option_three = models.CharField(max_length=300)
