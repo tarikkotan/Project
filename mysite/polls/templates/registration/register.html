@@ -1,0 +1,21 @@
+{% extends "poll/base.html" %}
+
+{% block main %}
+
+{% load crispy_forms_tags %}         
+
+<!--Register--> 
+<div class="container py-5">
+	<h1>Kayıt Oluştur</h1>
+	<form method="POST">
+		{% csrf_token %}
+		{{ register_form|crispy }}                    
+		<button class="btn btn-primary" type="submit">Kayıt Oluştur</button>
+	</form>
+	<p class="text-center">Zaten hesabınız varsa,  kayıt olmak yerine<a href="/login"> Giriş</a> yapın.</p>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "poll/base.html" %}
+
+
+{% block main %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'loginStyle.css' %}" />
+
+<div class="login-page">
+    <div class="form">
+      <form class="register-form">
+        <input type="text" placeholder="name"/>
+        <input type="password" placeholder="password"/>
+        <input type="text" placeholder="email address"/>
+        <button>Oluştur</button>
+        <p class="message">Zaten kayıtlı mısın? <a href="#">Giriş Yap</a></p>
+      </form>
+      <form method="POST">
+        {% csrf_token %}
+        {{ login_form|crispy }}
+        <button class="btn btn-primary" type="submit">Giriş</button>
+        <p class="message">Kayıtlı değil misin? <a href="{% url 'register' %}">Create an account</a></p>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
