@@ -34,9 +34,10 @@
                 <div class="corner2"></div>
                 <div class="corner-fold"></div>
                 <div class="page-text w-richtext">
-                  <h3><strong>Deneme 2</strong></h3>
+                  <h3><strong>Merhabalar;</strong></h3>
                   <p>‍</p>
-                  <p>Burası da 2. Deneme için yazılmıştır.</p>
+                  <p>Merhabalar,günlerden<b style="color:green"> {{poll.mostSelected}}</b></p>
+                  
                 </div>
               </div>
             </div>
@@ -59,9 +60,8 @@
             <div class="layer-text right">
               <div class="page-right-2">
                 <div class="page-text w-richtext">
-                  <h3><strong>Merhabalar;</strong></h3>
-                  <p>‍</p>
-                  <p>Burası deneme amaçlı yazılmıştır. </p>
+                  <h3><strong></strong></h3>
+                  
                 </div>
               </div>
             </div>
@@ -69,13 +69,13 @@
         </div>
       </div>
 
-    <div class="row" >
+    <div class="row" id="Poll">
         <div class="col-lg-16 ">
             <div class="col-md-20">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">
-                            <span class="glyphicon glyphicon-arrow-right"> </span> Bir sonraki cümle hangisi olmalı ? <a  target="_blank"></a>
+                            <span class="glyphicon glyphicon-arrow-right"> </span> Bir sonraki cümle sizce hangisi olmalı ? <a  target="_blank"></a>
                         </h3>
                     </div>
                     <form method="POST">
@@ -121,7 +121,7 @@
                     </div>
                     {% else %}
                     <div class="panel-footer">
-                      <li>Oy vermek için , lütfen <a href="{% url 'login' %}">Giriş</a> yapınız.</li>
+                      <li>Oy vermek için , lütfen <a href="{% url 'login' %}" style="color:green">Giriş</a> yapınız.</li>
                     </div>
                     {% endif %}
 

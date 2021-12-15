@@ -3,7 +3,6 @@ from django.shortcuts import render,redirect
 from .forms import CreatePollForm, NewUserForm
 from django.http import HttpResponse
 from .models import Poll
-import sqlite3
 from django.contrib import messages
 from django.contrib.auth import login, authenticate , logout
 from django.contrib.auth.forms import AuthenticationForm

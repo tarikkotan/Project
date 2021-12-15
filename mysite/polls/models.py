@@ -12,3 +12,11 @@ class Poll(models.Model):
     
     def total(self):
         return self.option_one_count + self.option_two_count + self.option_three_count
+    
+    def mostSelected(self):
+        if self.option_one_count > self.option_two_count and  self.option_one_count > self.option_three_count:
+            return self.option_one
+        elif self.option_two_count > self.option_one_count and self.option_two_count > self.option_three_count:
+            return self.option_two
+        else:
+            return self.option_three
