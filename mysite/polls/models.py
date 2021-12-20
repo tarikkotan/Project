@@ -20,3 +20,13 @@ class Poll(models.Model):
             return self.option_two
         else:
             return self.option_three
+        
+    def choices(self):
+        #pk'nın alıcağı değer birer birer artmalı ta ki en sonuncu index değerine ulaşana kadar.
+        return  Poll.objects.get(pk=19).mostSelected()  
+            
+            
+            
+
+            
+    
