@@ -1,0 +1,27 @@
+
+
+<style>
+    a { 
+        text-decoration: none;
+        color:crimson;
+    }
+</style>
+<head>
+    <h1>Sanırım Kayboldun.</h2>
+
+</head>
+<body>
+    <p>Sana yardımcı olabilicek linkler aşağıda.</p>
+
+<ul>
+    <li>
+        <a href={% url 'home' %} >Anasayfa</a>
+    </li>
+    <li>
+        <a href= {% url 'register' %}>Kayıt Ol</a>
+    </li>
+    <li>
+       <a href= {% url 'login' %}>Giriş Yap</a> 
+    </li>
+</ul>
+</body>

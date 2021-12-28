@@ -119,3 +119,17 @@ def logout_request(request):
     logout(request)
     messages.info(request, "Başarılı bir şekilde çıkış yapıldı.") 
     return redirect("/")
+
+
+def handler404(request, exception):
+    context = {}
+    response = render(request, "errors/404.html", context=context)
+    response.status_code = 404
+    return response
+
+
+def handler500(request):
+    context = {}
+    response = render(request, "errors/500.html", context=context)
+    response.status_code = 500
+    return response

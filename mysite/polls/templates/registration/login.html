@@ -10,18 +10,11 @@
 
 <div class="login-page">
     <div class="form">
-      <form class="register-form">
-        <input type="text" placeholder="name"/>
-        <input type="password" placeholder="password"/>
-        <input type="text" placeholder="email address"/>
-        <button>Oluştur</button>
-        <p class="message">Zaten kayıtlı mısın? <a href="#">Giriş Yap</a></p>
-      </form>
       <form method="POST">
         {% csrf_token %}
         {{ login_form|crispy }}
         <button class="btn btn-primary" type="submit">Giriş</button>
-        <p class="message">Kayıtlı değil misin? <a href="{% url 'register' %}">Create an account</a></p>
+        <p class="message">Kayıtlı değil misin? <a href="{% url 'register' %}">Kayıt Oluştur.</a></p>
       </form>
     </div>
   </div>

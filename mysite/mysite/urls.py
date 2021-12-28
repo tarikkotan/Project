@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path , include
 from polls import views as poll_views
 
+handler404 = 'polls.views.handler404'
+handler500 = 'polls.views.handler500'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
